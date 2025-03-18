@@ -1,0 +1,917 @@
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zjb.main.analysis.evaluation &#8212; ZJB-Docs  文档</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=946197a6"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/zjb/main/analysis/evaluation';</script>
+    <script src="../../../../_static/auto_logo.js?v=48649361"></script>
+    <link rel="index" title="索引" href="../../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/logo_black.png" class="logo__image only-light" alt="ZJB-Docs  文档 - Home"/>
+    <script>document.write(`<img src="../../../../_static/logo_white.png" class="logo__image only-dark" alt="ZJB-Docs  文档 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">GUI应用:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../gui/ZJB-GUI-document.html">使用手册</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python库:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../main/create_dtb.html">使用手册</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../main/stimulus.html">刺激</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../main/examples.html">示例</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../main/simple_dtb_simulation.html">数字孪生脑仿真简单示例</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">参考:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../api.html">API参考</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../_generate/apis/zjb.main.html">zjb.main</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../_generate/apis/zjb.main.analysis.html">zjb.main.analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.analysis.base.html">zjb.main.analysis.base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.analysis.custom.html">zjb.main.analysis.custom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.analysis.evaluation.html">zjb.main.analysis.evaluation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.analysis.mne_process.html">zjb.main.analysis.mne_process</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_generate/apis/zjb.main.api.html">zjb.main.api</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../_generate/apis/zjb.main.data.html">zjb.main.data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.data.base.html">zjb.main.data.base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.data.correlation.html">zjb.main.data.correlation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.data.regionmapping.html">zjb.main.data.regionmapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.data.series.html">zjb.main.data.series</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.data.space.html">zjb.main.data.space</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../_generate/apis/zjb.main.dtb.html">zjb.main.dtb</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.dtb.atlas.html">zjb.main.dtb.atlas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.dtb.dtb.html">zjb.main.dtb.dtb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.dtb.dtb_model.html">zjb.main.dtb.dtb_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.dtb.dynamics_model.html">zjb.main.dtb.dynamics_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.dtb.subject.html">zjb.main.dtb.subject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.dtb.utils.html">zjb.main.dtb.utils</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../_generate/apis/zjb.main.manager.html">zjb.main.manager</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.manager.project.html">zjb.main.manager.project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.manager.workspace.html">zjb.main.manager.workspace</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_generate/apis/zjb.main.optimization.html">zjb.main.optimization</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../_generate/apis/zjb.main.simulation.html">zjb.main.simulation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.simulation.monitor.html">zjb.main.simulation.monitor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.simulation.simulator.html">zjb.main.simulation.simulator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.simulation.solver.html">zjb.main.simulation.solver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.simulation.stimulus.html">zjb.main.simulation.stimulus</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../_generate/apis/zjb.main.trait_types.html">zjb.main.trait_types</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.trait_types.ArrayLike.html">zjb.main.trait_types.ArrayLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.trait_types.CArrayLike.html">zjb.main.trait_types.CArrayLike</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../_generate/apis/zjb.main.visualization.html">zjb.main.visualization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../_generate/apis/zjb.main.visualization.surface_space.html">zjb.main.visualization.surface_space</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/ZJBGroup/ZJB-Docs/issues/new?title=Issue%20on%20page%20%2F_modules/zjb/main/analysis/evaluation.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="创建议题"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>zjb.main.analysis.evaluation 源代码</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">butter</span><span class="p">,</span> <span class="n">correlate</span><span class="p">,</span> <span class="n">detrend</span><span class="p">,</span> <span class="n">filtfilt</span><span class="p">,</span> <span class="n">hilbert</span><span class="p">,</span> <span class="n">resample</span>
+<span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">SpectralEmbedding</span>
+<span class="kn">from</span> <span class="nn">traits.api</span> <span class="kn">import</span> <span class="n">Array</span><span class="p">,</span> <span class="n">Bool</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">Float</span><span class="p">,</span> <span class="n">HasTraits</span><span class="p">,</span> <span class="n">Instance</span><span class="p">,</span> <span class="n">Int</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">from</span> <span class="nn">zjb.main.analysis.base</span> <span class="kn">import</span> <span class="n">AnalyzerBase</span>
+<span class="kn">from</span> <span class="nn">zjb.main.data.series</span> <span class="kn">import</span> <span class="n">TimeSeries</span>
+
+
+<div class="viewcode-block" id="FCDAnalysis">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDAnalysis.html#zjb.main.analysis.evaluation.FCDAnalysis">[文档]</a>
+<span class="k">class</span> <span class="nc">FCDAnalysis</span><span class="p">(</span><span class="n">HasTraits</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    动态功能连接（Functional Connectivity Dynamics, FCD）分析类。</span>
+<span class="sd">    用于计算时间序列数据中的动态功能连接。</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ts_emp : TimeSeries, input=True</span>
+<span class="sd">        输入的时间序列对象</span>
+<span class="sd">    method : str, input=True</span>
+<span class="sd">        功能连接的计算方法，可选&quot;PCC&quot;（皮尔森相关系数）、&quot;CC&quot;（相干性连接）或&quot;MTD&quot;（多重时间导数）</span>
+<span class="sd">    swc : bool, input=True</span>
+<span class="sd">        是否使用滑动窗口分析，默认为True</span>
+<span class="sd">    sw : float, input=True</span>
+<span class="sd">        滑动窗口的长度（秒），默认为1.0</span>
+<span class="sd">    sp : float, input=True</span>
+<span class="sd">        两个连续滑动窗口之间的跨度（秒），默认为0.5</span>
+<span class="sd">    f_lo : float, input=True</span>
+<span class="sd">        带通滤波的低频截止（Hz），默认为0.01</span>
+<span class="sd">    f_hi : float, input=True</span>
+<span class="sd">        带通滤波的高频截止（Hz），默认为1</span>
+
+<span class="sd">    __return__ :  np.ndarray, dtype=np.float32, output=True</span>
+<span class="sd">        输出的动态功能连接序列，每个元素是一个功能连接矩阵</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">ts_emp</span><span class="p">:</span> <span class="n">TimeSeries</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">(</span><span class="n">TimeSeries</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># FC analysis methods (PCC, CC, MTD)</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">(</span><span class="s2">&quot;PCC&quot;</span><span class="p">,</span> <span class="s2">&quot;CC&quot;</span><span class="p">,</span> <span class="s2">&quot;MTD&quot;</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># using sliding window analysis</span>
+    <span class="n">swc</span> <span class="o">=</span> <span class="n">Bool</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Sliding window length (s)</span>
+    <span class="n">sw</span> <span class="o">=</span> <span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Spanning between two consecutive sliding window (s)</span>
+    <span class="n">sp</span> <span class="o">=</span> <span class="n">Float</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">f_lo</span> <span class="o">=</span> <span class="n">Float</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">f_hi</span> <span class="o">=</span> <span class="n">Float</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">__return__</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;执行动态功能连接分析&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Lack of ts input&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">swc</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">sample_period</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">sw</span>
+        <span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Window too large&quot;</span><span class="p">)</span>
+
+        <span class="n">dt</span><span class="p">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="n">AnalyzerBase</span><span class="o">.</span><span class="n">extract_dt_unit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="p">)</span>
+        <span class="n">fs</span><span class="p">,</span> <span class="n">tr</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="mi">1</span> <span class="o">/</span> <span class="n">dt</span><span class="p">,</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">sample_period</span> <span class="o">*</span> <span class="n">unit</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_apply_bandpass_filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+        <span class="n">dFC</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_dFC_series</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">tr</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dFC</span>
+
+<div class="viewcode-block" id="FCDAnalysis._compute_dFC_series">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDAnalysis.html#zjb.main.analysis.evaluation.FCDAnalysis._compute_dFC_series">[文档]</a>
+    <span class="k">def</span> <span class="nf">_compute_dFC_series</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">tr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">fs</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;计算动态功能连接序列&quot;&quot;&quot;</span>
+        <span class="n">met_fc</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;PCC&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">pearson_corr_coeff</span><span class="p">,</span>
+            <span class="s2">&quot;CC&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">coherence_connectivty</span><span class="p">,</span>
+            <span class="s2">&quot;MTD&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">mul_temporal_derivatives</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">swc</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">fs</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sw</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+            <span class="n">dFC</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">met_fc</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">](</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">windows</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__slide_temporal_windows</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">tr</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+            <span class="n">dFC</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">met_fc</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">method</span><span class="p">](</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">windows</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">dFC</span></div>
+
+
+<div class="viewcode-block" id="FCDAnalysis._apply_bandpass_filter">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDAnalysis.html#zjb.main.analysis.evaluation.FCDAnalysis._apply_bandpass_filter">[文档]</a>
+    <span class="k">def</span> <span class="nf">_apply_bandpass_filter</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">fs</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">order</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;应用带通滤波器&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">fs</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">x</span>
+        <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">butter</span><span class="p">(</span><span class="n">order</span><span class="p">,</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">f_lo</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">f_hi</span><span class="p">],</span> <span class="n">btype</span><span class="o">=</span><span class="s2">&quot;band&quot;</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+        <span class="n">x_filted</span> <span class="o">=</span> <span class="n">filtfilt</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x_filted</span></div>
+
+
+    <span class="k">def</span> <span class="nf">__slide_temporal_windows</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">fs</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;创建时间序列数据的滑动窗口&quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">swapaxes</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span>
+        <span class="n">sw_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sw</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span>
+        <span class="n">sp_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sp</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span>
+        <span class="n">n_w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">t</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">sw</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">sp</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">w_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_w</span><span class="p">,</span> <span class="n">sw_size</span><span class="p">,</span> <span class="o">*</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="n">w_stride</span> <span class="o">=</span> <span class="p">(</span><span class="n">sp_size</span> <span class="o">*</span> <span class="n">x</span><span class="o">.</span><span class="n">strides</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="o">.</span><span class="n">strides</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">*</span><span class="n">x</span><span class="o">.</span><span class="n">strides</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="n">windows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">stride_tricks</span><span class="o">.</span><span class="n">as_strided</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">w_shape</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="n">w_stride</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">windows</span>
+
+<div class="viewcode-block" id="FCDAnalysis.pearson_corr_coeff">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDAnalysis.html#zjb.main.analysis.evaluation.FCDAnalysis.pearson_corr_coeff">[文档]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">pearson_corr_coeff</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">axis_1</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;计算皮尔森相关系数&quot;&quot;&quot;</span>
+        <span class="n">fcm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">rowvar</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="ow">not</span> <span class="n">axis_1</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">fcm</span></div>
+
+
+<div class="viewcode-block" id="FCDAnalysis.cosine_similarity">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDAnalysis.html#zjb.main.analysis.evaluation.FCDAnalysis.cosine_similarity">[文档]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">cosine_similarity</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">axis_1</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;计算余弦相似度&quot;&quot;&quot;</span>
+        <span class="n">norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="ow">not</span> <span class="n">axis_1</span><span class="p">))</span>
+        <span class="n">dot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="n">simularity</span> <span class="o">=</span> <span class="n">dot</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">norm</span><span class="p">,</span> <span class="n">norm</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">simularity</span></div>
+
+
+<div class="viewcode-block" id="FCDAnalysis.coherence_connectivty">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDAnalysis.html#zjb.main.analysis.evaluation.FCDAnalysis.coherence_connectivty">[文档]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">coherence_connectivty</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;计算相干性连接&quot;&quot;&quot;</span>
+        <span class="n">phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">angle</span><span class="p">(</span><span class="n">hilbert</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">d_phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">phi</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span> <span class="o">-</span> <span class="n">phi</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:])</span>
+        <span class="n">d_phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">d_phi</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">fcm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">d_phi</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fcm</span></div>
+
+
+<div class="viewcode-block" id="FCDAnalysis.mul_temporal_derivatives">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDAnalysis.html#zjb.main.analysis.evaluation.FCDAnalysis.mul_temporal_derivatives">[文档]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">mul_temporal_derivatives</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;计算多重时间导数&quot;&quot;&quot;</span>
+        <span class="n">dt</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+        <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">dt_prod</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">dt</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">dt</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:])</span>
+        <span class="n">std_prod</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">std</span><span class="p">,</span> <span class="n">std</span><span class="p">)</span>
+        <span class="n">fcm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dt_prod</span> <span class="o">/</span> <span class="n">std_prod</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fcm</span></div>
+
+
+<div class="viewcode-block" id="FCDAnalysis.eigval_eigvec_extraction">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDAnalysis.html#zjb.main.analysis.evaluation.FCDAnalysis.eigval_eigvec_extraction">[文档]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">eigval_eigvec_extraction</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;提取特征值和特征向量&quot;&quot;&quot;</span>
+        <span class="n">eigval_m</span><span class="p">,</span> <span class="n">eigvect_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">eigvals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="n">eigvects</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">eigvect_m</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ei</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">max_i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">eigval_m</span><span class="p">)</span>
+            <span class="n">eigvals</span><span class="p">[</span><span class="n">ei</span><span class="p">]</span> <span class="o">=</span> <span class="n">eigval_m</span><span class="p">[</span><span class="n">max_i</span><span class="p">]</span>
+            <span class="n">eigvects</span><span class="p">[</span><span class="n">ei</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">eigvect_m</span><span class="p">[:,</span> <span class="n">max_i</span><span class="p">])</span>
+            <span class="n">eigval_m</span><span class="p">[</span><span class="n">max_i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">return</span> <span class="n">eigvals</span><span class="p">,</span> <span class="n">eigvects</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="FCDMatrix">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDMatrix.html#zjb.main.analysis.evaluation.FCDMatrix">[文档]</a>
+<span class="k">class</span> <span class="nc">FCDMatrix</span><span class="p">(</span><span class="n">FCDAnalysis</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    计算节点的动态功能连接矩阵,这个类继承自 FCDAnalysis。</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    comparison : Enum</span>
+<span class="sd">        比较的方法，包括&#39;CS-LEi&#39;（余弦相似度-主要特征向量）、&#39;CS-UT&#39;（余弦相似度-上三角）、&#39;PCC-LEi&#39;（皮尔森相关系数-主要特征向量）和&#39;PCC-UT&#39;（皮尔森相关系数-上三角）。</span>
+<span class="sd">    n_eig : int</span>
+<span class="sd">        计算稳定周期时用于提取的特征值数量。</span>
+
+<span class="sd">    __return__ : 返回动态功能连接矩阵。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">comparison</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">(</span><span class="s2">&quot;CS-LEi&quot;</span><span class="p">,</span> <span class="s2">&quot;CS-UT&quot;</span><span class="p">,</span> <span class="s2">&quot;PCC-LEi&quot;</span><span class="p">,</span> <span class="s2">&quot;PCC-UT&quot;</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">n_eig</span> <span class="o">=</span> <span class="n">Int</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">__return__</span> <span class="o">=</span> <span class="n">Tuple</span><span class="p">(</span>
+        <span class="n">Array</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span>  <span class="c1"># FCD matrix</span>
+        <span class="n">Dict</span><span class="p">(),</span>  <span class="c1"># Eigenvalues of stable periods</span>
+        <span class="n">Dict</span><span class="p">(),</span>  <span class="c1"># Eigenvectors of stable periods</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;执行动态功能连接矩阵和稳定周期指数的计算&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Lack of ts input&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">swc</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">sample_period</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">sw</span>
+        <span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Window too large&quot;</span><span class="p">)</span>
+
+        <span class="n">dt</span><span class="p">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="n">AnalyzerBase</span><span class="o">.</span><span class="n">extract_dt_unit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="p">)</span>
+        <span class="n">fs</span><span class="p">,</span> <span class="n">tr</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="mi">1</span> <span class="o">/</span> <span class="n">dt</span><span class="p">,</span>
+            <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">sample_period</span> <span class="o">*</span> <span class="n">unit</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_apply_bandpass_filter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+        <span class="n">dFC</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_dFC_series</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">tr</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+        <span class="n">fcd_matrix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_FCD_matrix</span><span class="p">(</span><span class="n">dFC</span><span class="p">)</span>
+        <span class="c1"># eigvals, eigvects = self._extract_stable_eigs(fcd_matrix, fs)</span>
+        <span class="c1"># return fcd_matrix, eigvals, eigvects</span>
+        <span class="k">return</span> <span class="n">fcd_matrix</span>
+
+<div class="viewcode-block" id="FCDMatrix._compute_FCD_matrix">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDMatrix.html#zjb.main.analysis.evaluation.FCDMatrix._compute_FCD_matrix">[文档]</a>
+    <span class="k">def</span> <span class="nf">_compute_FCD_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dFC</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;根据输入的动态功能连接序列计算功能连接矩阵&quot;&quot;&quot;</span>
+        <span class="n">comparative_methods</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;CS&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">cosine_similarity</span><span class="p">,</span>
+            <span class="s2">&quot;PCC&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">pearson_corr_coeff</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">extraction_methods</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;LEi&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">__leading_eigvectors</span><span class="p">,</span>
+            <span class="s2">&quot;UT&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">__upper_triangles</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">met_c</span> <span class="o">=</span> <span class="n">comparative_methods</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">comparison</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]]</span>
+        <span class="n">met_e</span> <span class="o">=</span> <span class="n">extraction_methods</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">comparison</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">fcd_matrix</span> <span class="o">=</span> <span class="n">met_c</span><span class="p">(</span><span class="n">met_e</span><span class="p">(</span><span class="n">dFC</span><span class="p">),</span> <span class="n">axis_1</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fcd_matrix</span></div>
+
+
+<div class="viewcode-block" id="FCDMatrix._extract_stable_eigs">
+<a class="viewcode-back" href="../../../../_generate/apis/zjb.main.analysis.evaluation.FCDMatrix.html#zjb.main.analysis.evaluation.FCDMatrix._extract_stable_eigs">[文档]</a>
+    <span class="k">def</span> <span class="nf">_extract_stable_eigs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fcd_matrix</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">fs</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;从功能连接矩阵中提取稳定周期的特征值和特征向量&quot;&quot;&quot;</span>
+        <span class="n">stable_eigval</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">stable_eigvect</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">xir</span><span class="p">,</span> <span class="n">xir_cutoff</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__spectral_embedding</span><span class="p">(</span><span class="n">fcd_matrix</span><span class="p">)</span>
+        <span class="n">periods</span><span class="p">,</span> <span class="n">periods_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__stable_periods_identification</span><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">xir</span><span class="p">,</span> <span class="n">xir_cutoff</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">periods</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">periods_t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ts_emp</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">periods</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span> <span class="n">periods</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="p">:]</span>
+            <span class="n">fcd_matrix_partial</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">rowvar</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">val</span><span class="p">,</span> <span class="n">vect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eigval_eigvec_extraction</span><span class="p">(</span><span class="n">fcd_matrix_partial</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_eig</span><span class="p">)</span>
+            <span class="n">stable_eigval</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+            <span class="n">stable_eigvect</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">vect</span>
+
+        <span class="k">return</span> <span class="n">stable_eigval</span><span class="p">,</span> <span class="n">stable_eigvect</span></div>
+
+
+    <span class="k">def</span> <span class="nf">__leading_eigvectors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dFC</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;从动态功能连接序列中提取主要特征向量&quot;&quot;&quot;</span>
+        <span class="n">V_s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">dFC</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dFC</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">V_1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eigval_eigvec_extraction</span><span class="p">(</span><span class="n">dFC</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">V_s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">V_1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">V_s</span>
+
+    <span class="k">def</span> <span class="nf">__upper_triangles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dFC</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;从动态功能连接序列中提取上三角矩阵&quot;&quot;&quot;</span>
+        <span class="n">V_s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">dFC</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dFC</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dFC</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">V_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">dFC</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="n">V_s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">V_1</span>
+        <span class="k">return</span> <span class="n">V_s</span>
+
+    <span class="k">def</span> <span class="nf">__spectral_embedding</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fcd_matrix</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">n_dim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;对功能连接矩阵进行谱计算及嵌入&quot;&quot;&quot;</span>
+        <span class="n">se</span> <span class="o">=</span> <span class="n">SpectralEmbedding</span><span class="p">(</span><span class="n">n_dim</span><span class="p">,</span> <span class="n">affinity</span><span class="o">=</span><span class="s2">&quot;precomputed&quot;</span><span class="p">)</span>
+        <span class="n">xi</span> <span class="o">=</span> <span class="n">se</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">fcd_matrix</span> <span class="o">-</span> <span class="n">fcd_matrix</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+        <span class="n">xir</span> <span class="o">=</span> <span class="n">AnalyzerBase</span><span class="o">.</span><span class="n">compute_norms</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">xir_cutoff</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">xir</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">xir</span><span class="p">,</span> <span class="n">xir_cutoff</span>
+
+    <span class="k">def</span> <span class="nf">__stable_periods_identification</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">fs</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">xir</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">xir_cutoff</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;根据谱嵌入结果计算稳定周期&quot;&quot;&quot;</span>
+        <span class="n">sw_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sw</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span>
+        <span class="n">sp_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sp</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">xir</span> <span class="o">&lt;</span> <span class="n">xir_cutoff</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
+            <span class="n">periods</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+            <span class="n">periods</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">sw_size</span>
+            <span class="n">periods</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">xir</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">sp_size</span> <span class="o">+</span> <span class="n">sw_size</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">jp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">xir</span> <span class="o">&gt;</span> <span class="n">xir_cutoff</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">periods</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">jp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">periods</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+                <span class="n">periods</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">jp</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">sp_size</span>
+                <span class="n">periods</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">jp</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sp_size</span> <span class="o">+</span> <span class="n">sw_size</span>
+        <span class="n">periods_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">periods</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">fs</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">periods</span><span class="p">,</span> <span class="n">periods_t</span></div>
+
+
+
+<span class="k">def</span> <span class="nf">kld</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    计算两个矩阵之间的Kullback-Leibler散度。</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : np.ndarray</span>
+<span class="sd">        第一个矩阵。</span>
+<span class="sd">    y : np.ndarray</span>
+<span class="sd">        第二个矩阵。</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    kld_result : float</span>
+<span class="sd">        x和y之间的Kullback-Leibler散度。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">kld_result</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">))</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">kld_result</span>
+
+
+<span class="k">def</span> <span class="nf">fcd_analysis</span><span class="p">(</span>
+    <span class="n">timeseries</span><span class="p">:</span> <span class="n">TimeSeries</span><span class="p">,</span>
+    <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;CC&quot;</span><span class="p">,</span>
+    <span class="n">sw</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">spanning</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">f_low</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span>
+    <span class="n">f_high</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    执行FCD分析</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    timeseries : TimeSeries</span>
+<span class="sd">        时间序列数据。</span>
+<span class="sd">    method : str, optional</span>
+<span class="sd">        功能连接的计算方法。</span>
+<span class="sd">    sw : float, optional</span>
+<span class="sd">        滑动窗口的长度（秒）。</span>
+<span class="sd">    spanning : float, optional</span>
+<span class="sd">        两个连续滑动窗口之间的跨度（秒）。</span>
+<span class="sd">    f_low : float, optional</span>
+<span class="sd">        带通滤波的低频截止（Hz）。</span>
+<span class="sd">    f_high : float, optional</span>
+<span class="sd">        带通滤波的高频截止（Hz）。</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dFC : np.ndarray</span>
+<span class="sd">        动态功能连接序列。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fcd</span> <span class="o">=</span> <span class="n">FCDAnalysis</span><span class="p">(</span>
+        <span class="n">ts_emp</span><span class="o">=</span><span class="n">timeseries</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">sw</span><span class="o">=</span><span class="n">sw</span><span class="p">,</span> <span class="n">sp</span><span class="o">=</span><span class="n">spanning</span><span class="p">,</span> <span class="n">f_lo</span><span class="o">=</span><span class="n">f_low</span><span class="p">,</span> <span class="n">f_hi</span><span class="o">=</span><span class="n">f_high</span>
+    <span class="p">)</span>
+    <span class="n">dFC</span> <span class="o">=</span> <span class="n">fcd</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">dFC</span>
+
+
+<span class="k">def</span> <span class="nf">fcd_matrix</span><span class="p">(</span>
+    <span class="n">timeseries</span><span class="p">:</span> <span class="n">TimeSeries</span><span class="p">,</span>
+    <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;CC&quot;</span><span class="p">,</span>
+    <span class="n">sw</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">spanning</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">f_low</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span>
+    <span class="n">f_high</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span>
+    <span class="n">comparison</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;PCC-UT&quot;</span><span class="p">,</span>
+    <span class="n">n_eig</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    timeseries : TimeSeries</span>
+<span class="sd">        时间序列数据。</span>
+<span class="sd">    method : str, optional</span>
+<span class="sd">        功能连接的计算方法，默认为&#39;CC&#39;。</span>
+<span class="sd">    sw : float, optional</span>
+<span class="sd">        滑动窗口的长度（秒），默认为1.0秒。</span>
+<span class="sd">    spanning : float, optional</span>
+<span class="sd">        两个连续滑动窗口之间的跨度（秒），默认为0.5秒。</span>
+<span class="sd">    f_low : float, optional</span>
+<span class="sd">        带通滤波的低频截止（Hz），默认为0.01 Hz。</span>
+<span class="sd">    f_high : float, optional</span>
+<span class="sd">        带通滤波的高频截止（Hz），默认为0.25 Hz。</span>
+<span class="sd">    comparison : str, optional</span>
+<span class="sd">        比较方法，默认为&#39;PCC-UT&#39;。</span>
+<span class="sd">    n_eig : int, optional</span>
+<span class="sd">        在稳定周期分析中使用的特征值数量，默认为3。</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    fcd_m : np.ndarray</span>
+<span class="sd">        计算得到的动态功能连接矩阵。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fcd</span> <span class="o">=</span> <span class="n">FCDMatrix</span><span class="p">(</span>
+        <span class="n">ts_emp</span><span class="o">=</span><span class="n">timeseries</span><span class="p">,</span>
+        <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span>
+        <span class="n">sw</span><span class="o">=</span><span class="n">sw</span><span class="p">,</span>
+        <span class="n">sp</span><span class="o">=</span><span class="n">spanning</span><span class="p">,</span>
+        <span class="n">f_lo</span><span class="o">=</span><span class="n">f_low</span><span class="p">,</span>
+        <span class="n">f_hi</span><span class="o">=</span><span class="n">f_high</span><span class="p">,</span>
+        <span class="n">comparison</span><span class="o">=</span><span class="n">comparison</span><span class="p">,</span>
+        <span class="n">n_eig</span><span class="o">=</span><span class="n">n_eig</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">fcd_m</span> <span class="o">=</span> <span class="n">fcd</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">fcd_m</span>
+
+
+<span class="k">def</span> <span class="nf">pearson_correlation</span><span class="p">(</span><span class="n">array_1</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">array_2</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    计算两个数组间的皮尔森相关系数。</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    array_1 : np.ndarray</span>
+<span class="sd">        第一个矩阵。</span>
+<span class="sd">    array_2 : np.ndarray</span>
+<span class="sd">        第二个矩阵。</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    result : float</span>
+<span class="sd">        两个数组间的皮尔森相关系数。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">array_1</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">array_2</span><span class="o">.</span><span class="n">flatten</span><span class="p">())[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+
+<span class="k">def</span> <span class="nf">self_pearson_correlation</span><span class="p">(</span><span class="n">timeseries</span><span class="p">:</span> <span class="n">TimeSeries</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    计算节点之间的皮尔森相关系数</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    timeseries : TimeSeries</span>
+<span class="sd">        时间序列数据。</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    corr_result : np.ndarray</span>
+<span class="sd">        节点间的皮尔森相关系数矩阵。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">corr_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">timeseries</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">rowvar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">corr_result</span>
+
+
+<span class="k">def</span> <span class="nf">temporal_covariance</span><span class="p">(</span><span class="n">timeseries</span><span class="p">:</span> <span class="n">TimeSeries</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    计算时间序列数据中各节点间的协方差。</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    timeseries : TimeSeries</span>
+<span class="sd">        时间序列数据。</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    covar_result : np.ndarray</span>
+<span class="sd">        节点间的协方差矩阵。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">covar_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">timeseries</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">rowvar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">covar_result</span>
+
+
+<span class="k">def</span> <span class="nf">timeseries_data_cropping</span><span class="p">(</span><span class="n">timeseries</span><span class="p">:</span> <span class="n">TimeSeries</span><span class="p">,</span> <span class="n">discard</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    从时间序列数据中裁剪掉前面一部分数据。</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    timeseries : TimeSeries</span>
+<span class="sd">        时间序列数据。</span>
+<span class="sd">    discard : int, optional</span>
+<span class="sd">        要丢弃的数据点数量，默认为100。</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    result : np.ndarray</span>
+<span class="sd">        裁剪后的时间序列数据。</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">timeseries</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">discard</span><span class="p">:,</span> <span class="p">:]</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： ZJB Group
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023, ZJB Group.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
